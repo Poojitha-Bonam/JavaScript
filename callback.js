@@ -30,7 +30,6 @@ console.log("Hello,",x)
 
 
 // 3rd Question
-
 function calculate(x,y,callback){
     return callback(x,y)
 }
@@ -38,7 +37,6 @@ var diff=calculate(10,5,function(x,y){
     return x-y
 })
 console.log("Difference:", diff);
-
 
 
 // With Arrow Function
