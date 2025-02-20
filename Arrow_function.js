@@ -16,7 +16,7 @@ var add = (a, b) => a + b;
 // Uses the function keyword.
 // Typically longer and more verbose.
 
-const add = function(a, b) {
+var add = function(a, b) {
   return a + b;
 };
 
