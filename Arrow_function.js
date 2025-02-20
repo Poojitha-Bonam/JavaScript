@@ -1,7 +1,7 @@
 // 1st-Question
 // An arrow function in JavaScript is a more concise way to write functions. It doesnot consists Function keyword. It was introduced in ES6 (ECMAScript 2015) and has a shorter syntax compared to traditional function expressions. Additionally, arrow functions have specific behavior with respect to the this keyword.
 
-// The syntax of an arrow function differs significantly from a traditional function expression in JavaScript. Here’s a clear comparison:
+// The syntax of an arrow function differs significantly from a traditional function expression in JavaScript. Here’s a clear comparison
 
 // Arrow Function:
 
