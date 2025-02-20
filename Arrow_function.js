@@ -24,13 +24,13 @@ const add = function(a, b) {
 var add = (a,b) => (a+b)
 console.log(add(2,3))
 
+
 // 3rd-Question
 var square = n => (n*n)
 console.log(square(4))
 
 
 // 4th-Question
-
 // When an arrow function takes exactly one parameter, the parentheses around the parameter can be omitted.
 // Syntax look likes this:
 
@@ -38,10 +38,8 @@ var y = num => num * 2;
 console.log(y(3))
 
 // Why parentheses might be omitted?
-
 // When there is exactly one parameter, parentheses around the parameter are optional, because it makes the syntax more concise and easier to read. JavaScript allows this shorthand as a convenience. 
 // However, if:
-
 // There are zero parameters (e.g., () => ...), parentheses are required for an arrow function when there are no parameters.
 // There are multiple parameters (e.g., (param1, param2) => ...)
 // The parameter needs destructuring (e.g., ({key}) => ...)
@@ -49,17 +47,17 @@ console.log(y(3))
 // In these cases, parentheses are required because they improve clarity and ensure correct interpretation by the JavaScript engine.
 
 // Example:
-// Without parentheses (single parameter):
 
+// Without parentheses (single parameter):
 var greet = num => num + 5
 console.log(greet(10))
 
 // With parentheses (optional but valid):
-
 var greet = (num) => num + 5
 console.log(greet(10))
 
 // Both work the same, but omitting parentheses is more consice, when possible.
+
 
 // 5th-Question
 
@@ -72,6 +70,7 @@ var cube = (num) => {
     return num**3
 }
 console.log(cube(2))
+
 
 // 6th-Question
 var sub = (a,b) => {
