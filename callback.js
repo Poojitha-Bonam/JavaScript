@@ -7,16 +7,11 @@ var sum=processNumbers(3,4,function(x,y){
 })
 console.log("sum:",sum)
 
-        // or
 
-// 1st Question
-function processNumbers(anonymous){
-    console.log(anonymous(3,4))
-}
-var sum=function(a,b){
-    return a+b
-}
-processNumbers(sum)
+// With Arrow function
+var processNumbers =(x,y,callback) => callback(x,y)
+var sum=processNumbers(3,4,(x,y) => x+y)
+console.log("sum:",sum)
 
 
 // 2nd Question
@@ -26,6 +21,11 @@ function greet(callback){
 var x=greet(function(name){
     return name
 });
+console.log("Hello,",x)
+
+// With arrow function
+var greet = (callback) => callback("Alice")
+var x = greet((name) => name)
 console.log("Hello,",x)
 
 
@@ -40,11 +40,6 @@ console.log("Difference:", diff);
 
 
 // With Arrow Function
-function calculate(x,y,callback){
-    return callback(x,y)
-}
+var calculate = (x,y,callback) => callback(x,y)
 var diff=calculate(10,5,(a,b) => a-b)
 console.log("Difference:", diff);
-
-
-
