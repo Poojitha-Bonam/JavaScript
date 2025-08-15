@@ -14,12 +14,41 @@ create_btn.classList = "btn"
 document.body.appendChild(create_btn)
 
 create_btn.addEventListener("click", function() {
-    let random = Math.floor(Math.random() * 2);
-    if (random === 0) {
-        coin_img.src = "https://upload.wikimedia.org/wikipedia/commons/1/16/Indian_1_Rupee_Coin_Reverse_or_Tails.jpg";
-        coin_img.classList = "tails";
-    } else {
-        coin_img.src = "https://banknotecoinstamp.com/cdn/shop/products/302_92188f9e-1ddf-48cc-82be-f16451a8e480.jpg?v=1674642291";
-        coin_img.classList = "heads";
-    }
+
+    let angle = 0;
+    let spinCount = 0;
+
+    function spin() {
+        angle += 20; // rotation speed
+        coin_img.style.transform = `rotateY(${angle}deg)`;
+
+        // Count spins
+        if (angle % 360 === 0) {
+          spinCount++;
+        }
+
+        // Keep spinning until 3 spins are done
+        if (spinCount < 3) {
+          requestAnimationFrame(spin);
+        } else {
+          // Show random result
+          const random = Math.floor(Math.random() * 2);
+          coin_img.src = random === 0 ? "https://banknotecoinstamp.com/cdn/shop/products/302_92188f9e-1ddf-48cc-82be-f16451a8e480.jpg?v=1674642291" : "https://upload.wikimedia.org/wikipedia/commons/1/16/Indian_1_Rupee_Coin_Reverse_or_Tails.jpg";
+          coin_img.style.transform = "rotateY(0deg)"; // reset
+        }
+      }
+      // Start spinning
+      requestAnimationFrame(spin);
+
+    //   Without Animation
+    
+    // let random = Math.floor(Math.random() * 2);
+    // if (random === 0) {
+    //     coin_img.src = "https://upload.wikimedia.org/wikipedia/commons/1/16/Indian_1_Rupee_Coin_Reverse_or_Tails.jpg";
+    //     coin_img.classList = "tails";
+    // } else {
+    //     coin_img.src = "https://banknotecoinstamp.com/cdn/shop/products/302_92188f9e-1ddf-48cc-82be-f16451a8e480.jpg?v=1674642291";
+    //     coin_img.classList = "heads";
+    // }
 });
+
