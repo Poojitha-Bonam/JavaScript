@@ -1,0 +1,35 @@
+.heading {
+    text-align: center;
+    color:blueviolet;
+    font-weight: bold;
+    font-style: italic;
+}
+.tails {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius: 50%;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color:green;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+.heads{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius: 50%;
+}
